@@ -16,7 +16,7 @@ To use this template, follow these steps:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/flutter_template.git
+git clone https://github.com/stanimeros/flutter_template.git
 cd flutter_template
 ```
 
