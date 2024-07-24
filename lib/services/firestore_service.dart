@@ -2,13 +2,13 @@ library flutter_template;
 import 'dart:async';
 import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flutter_template/common/app_user.dart';
-import 'package:flutter_template/common/globals.dart' as globals;
+import 'package:flutter_template/objects/app_user.dart';
+import 'package:flutter_template/objects/globals.dart' as globals;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/common/location_service.dart';
-import 'package:flutter_template/common/message.dart';
+import 'package:flutter_template/services/location_service.dart';
+import 'package:flutter_template/objects/message.dart';
 
 class FirestoreService {
   User authUser = FirebaseAuth.instance.currentUser!;

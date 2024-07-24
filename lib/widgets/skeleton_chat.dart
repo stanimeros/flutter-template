@@ -1,7 +1,7 @@
 library flutter_template;
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_template/common/globals.dart' as globals;
+import 'package:flutter_template/objects/globals.dart' as globals;
 
 class SkeletonChat extends StatelessWidget {
   final double height;

@@ -1,7 +1,7 @@
 library flutter_template;
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/common/app_user.dart';
+import 'package:flutter_template/objects/app_user.dart';
 import 'package:flutter_template/widgets/profile_picture.dart';
 import 'package:image_picker/image_picker.dart';
 

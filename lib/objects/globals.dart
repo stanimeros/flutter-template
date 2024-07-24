@@ -1,7 +1,7 @@
 library flutter_template.globals;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/common/app_user.dart';
+import 'package:flutter_template/objects/app_user.dart';
 
 AppUser? user;
 GeoPoint? deviceLocation;

@@ -1,10 +1,10 @@
 library flutter_template;
 import 'package:flutter/material.dart';
-import 'package:flutter_template/common/app_user.dart';
+import 'package:flutter_template/objects/app_user.dart';
 import 'package:flutter_template/widgets/messenger.dart';
 import 'package:flutter_template/widgets/custom_loader.dart';
-import 'package:flutter_template/common/globals.dart' as globals;
-import 'package:flutter_template/common/firestore_service.dart';
+import 'package:flutter_template/objects/globals.dart' as globals;
+import 'package:flutter_template/services/firestore_service.dart';
 import 'package:flutter_template/widgets/profile_picture.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 

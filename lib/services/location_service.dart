@@ -1,6 +1,6 @@
 library flutter_template;
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter_template/common/globals.dart' as globals;
+import 'package:flutter_template/objects/globals.dart' as globals;
 import 'package:geolocator/geolocator.dart';
 
 class LocationService{
