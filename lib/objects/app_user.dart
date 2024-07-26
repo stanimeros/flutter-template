@@ -1,4 +1,3 @@
-library flutter_template;
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AppUser{
@@ -20,8 +19,8 @@ class AppUser{
     Map data = doc.data() as Map;
     return AppUser(
       uid: doc.id,
-      username: data['username'] ?? '',
       email: data['email'] ?? '',
+      username: data['username'] ?? '',
       joined: data['joined']?.toDate(),
       imageURL: data['image'] ?? '',
     );

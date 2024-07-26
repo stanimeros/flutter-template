@@ -1,6 +1,5 @@
 library flutter_template;
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter_template/objects/globals.dart' as globals;
 import 'package:geolocator/geolocator.dart';
 
 class LocationService{
@@ -30,7 +29,6 @@ class LocationService{
     if (await permissionsProcess()){
       Position? pos = await Geolocator.getCurrentPosition();
       GeoPoint loc = GeoPoint(pos.latitude, pos.longitude);
-      globals.deviceLocation = loc;
       return loc;
     }
     return null;

@@ -1,4 +1,3 @@
-library flutter_template;
 import 'package:flutter/material.dart';
 
 class Messenger extends StatelessWidget {

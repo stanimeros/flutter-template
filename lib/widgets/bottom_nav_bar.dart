@@ -34,8 +34,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
           label: 'Feed',
         ),
         BottomNavigationBarItem(
-          icon: Icon(LucideIcons.users),
-          label: 'Friends',
+          icon: Icon(LucideIcons.search),
+          label: 'Search',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(LucideIcons.upload),
+          label: 'Create',
         ),
         BottomNavigationBarItem(
           icon: Icon(LucideIcons.messageCircle),

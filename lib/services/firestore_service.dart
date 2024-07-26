@@ -7,7 +7,6 @@ import 'package:flutter_template/objects/globals.dart' as globals;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/services/location_service.dart';
 import 'package:flutter_template/objects/message.dart';
 
 class FirestoreService {
@@ -345,7 +344,6 @@ class FirestoreService {
         }
 
         await FirestoreService().getUser(authUser.uid);
-        globals.deviceLocation = await LocationService().getCurrentPosition();
       }
     }catch(e){
       debugPrint('Error initializeUser: $e');

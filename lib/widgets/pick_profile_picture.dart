@@ -1,4 +1,3 @@
-library flutter_template;
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_template/objects/app_user.dart';

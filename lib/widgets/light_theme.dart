@@ -1,25 +1,28 @@
-library flutter_template;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class CustomTheme {
-  static ThemeData getThemeData(TextStyle textStyle) {
+class LightTheme {
+  static ThemeData get themeData {
     return ThemeData(
-      brightness: Brightness.dark,
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: Colors.purple,
+        brightness: Brightness.light,
+      ),
       textTheme: TextTheme(
-        titleSmall: textStyle,
-        titleMedium: textStyle,
-        titleLarge: textStyle,
-        bodySmall: textStyle,
-        bodyMedium: textStyle,
-        bodyLarge: textStyle,
+        titleSmall: GoogleFonts.manrope(),
+        titleMedium: GoogleFonts.manrope(),
+        titleLarge: GoogleFonts.manrope(),
+        bodySmall: GoogleFonts.manrope(),
+        bodyMedium: GoogleFonts.manrope(),
+        bodyLarge: GoogleFonts.manrope(),
       ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         // selectedItemColor: const Color.fromARGB(255, 35, 35, 35),
-        selectedLabelStyle: textStyle.copyWith(
+        selectedLabelStyle: GoogleFonts.manrope(
           fontWeight: FontWeight.bold,
           fontSize: 12
         ),
-        unselectedLabelStyle: textStyle.copyWith(
+        unselectedLabelStyle: GoogleFonts.manrope(
           fontWeight: FontWeight.bold,
           fontSize: 12
         ),
@@ -34,7 +37,7 @@ class CustomTheme {
               borderRadius: BorderRadius.circular(10),
             ),
           ),
-          textStyle: WidgetStatePropertyAll(textStyle.copyWith(
+          textStyle: WidgetStatePropertyAll(GoogleFonts.manrope(
             fontWeight: FontWeight.w500,
             fontSize: 16
           )),
