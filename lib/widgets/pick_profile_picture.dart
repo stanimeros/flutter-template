@@ -51,7 +51,8 @@ class _PickProfilePictureState extends State<PickProfilePicture> {
           fit: BoxFit.cover,
           File(newProfilePicture!.path)
         ) : ProfilePicture(
-          user: widget.user,
+          title: widget.user.username,
+          image: widget.user.imageURL,
           size: widget.size,
           color: widget.color,
           backgroundColor: widget.backgroundColor

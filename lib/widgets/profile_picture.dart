@@ -1,53 +1,56 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/objects/app_user.dart';
 
 class ProfilePicture extends StatelessWidget {
 
-  final AppUser user;
+  final String title;
+  final String image;
   final double size;
-  final Color color;
-  final Color backgroundColor;
+  final Color? color;
+  final Color? backgroundColor;
 
   const ProfilePicture({
     super.key,
-    required this.user,
+    required this.title,
+    required this.image,
     required this.size,
-    required this.color,
-    required this.backgroundColor
+    this.color,
+    this.backgroundColor,
   });
-
 
   @override
   Widget build(BuildContext context) {
+    final defaultColor = Theme.of(context).textTheme.bodyMedium?.color ?? Colors.black;
+    final defaultBackgroundColor = Theme.of(context).highlightColor;
+
     return Container(
       clipBehavior: Clip.hardEdge,
       width: size,
       height: size,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: backgroundColor,
+        color: backgroundColor ?? defaultBackgroundColor,
         shape: BoxShape.circle,
       ),
       child: Stack(
         alignment: Alignment.center,
         children: [
           Text(
-            user.username.substring(0,1).toUpperCase(),
+            title.isNotEmpty ? title.substring(0,1).toUpperCase() : '',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: size/2.5,
               fontWeight: FontWeight.bold,
-              color: color
+              color: color ?? defaultColor
             ),
           ),
           Visibility(
-            visible: user.imageURL.isNotEmpty,
+            visible: image.isNotEmpty,
             child: CachedNetworkImage(
               width: size,
               height: size,
               fit: BoxFit.cover,
-              imageUrl: user.imageURL
+              imageUrl: image
             ),
           ),
         ],
