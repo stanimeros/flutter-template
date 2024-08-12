@@ -85,15 +85,16 @@ class FirestoreService {
         DocumentSnapshot userDoc = await userDocRef.get();
         if (!userDoc.exists){
           String username = authUser.displayName!.replaceAll(' ', '').toLowerCase();
-          if (username.length>8){
-            username.substring(0,8);
+          if (username.length > 8){
+            username = username.substring(0,8);
           }
 
-          int counter = 1;
+          int counter = 0;
           String? someUid = await getUID(username);
           while (someUid != null) {
-            username = '$username$counter';
             counter++;
+            username = '$username$counter';
+            someUid = await getUID(username);
           }
 
           await userDocRef.set({
